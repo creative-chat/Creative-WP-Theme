@@ -14,7 +14,7 @@ Theme URI:    http://creativecode.site/
 Author:       Creative Source
 Author URI:   http://creative.chat/
 
-<img src="https://raw.githubusercontent.com/creative-chat/Creative-WP-Theme/master/screenshot.png">
+<center><img src="https://raw.githubusercontent.com/creative-chat/Creative-WP-Theme/master/screenshot.png"></center>
 
 # Version Update
 Version 1.0: 2020-07-08

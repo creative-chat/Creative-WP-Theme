@@ -10,7 +10,7 @@ Udemy:
 
 # Creative WP Theme detail
 Theme Name:   Creative WP V1.0 <br/>
-Theme URI:    http://creativecode.site <br/>
+Demo URI:     http://www.code202007zh.demo.creative.chat <br/>
 Author:       Creative Source <br/>
 Author URI:   http://creative.chat <br/>
 

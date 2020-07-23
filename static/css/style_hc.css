@@ -1,0 +1,328 @@
+/* 电脑/平板设备屏幕，默认屏幕（大于等于 767px） */
+@media (min-width: 768px) 
+{
+  h3.social_text 
+  {
+    color: black;
+    font-size: 22px;
+    margin: 30px 0 20px 0;
+  }
+}
+
+/* 手机屏幕（小于等于 768px） */
+@media (max-width: 768px) 
+{
+    h3.social_text 
+    {
+      color: black;
+      text-align: center;
+      font-size: 22px;
+    }
+}   
+
+.center {
+    text-align: center;
+}
+
+/*.main_menu nav > ul > li:hover ul.sub-menu {
+  visibility: visible;
+  max-height: 360px;
+  padding: 24px 20px;
+}
+.main_menu nav > ul > li ul.sub-menu {
+  position: absolute;
+  min-width: 220px;
+  padding: 0 20px;
+  background: #fff;
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  -webkit-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+  left: 0;
+  right: auto;
+  visibility: hidden;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 99;
+  top: 120%;
+  text-align: left;
+}
+.main_menu nav > ul > li ul.sub-menu li a {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+.main_menu nav > ul > li ul.sub-menu li a:hover {
+  color: #fe3737;
+}
+
+.color_two .main_menu nav > ul > li ul.sub-menu li a:hover {
+  color: #e97810;
+}*/
+
+/*menu start*/
+ul { /* 取消ul預設的內縮及樣式 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.drop-down-menu {
+    /*border: #ccc 1px solid;*/
+    display: inline-block;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 13px;
+}
+
+ul.drop-down-menu li {
+    position: relative;
+    white-space: nowrap;
+    border-right: #ccc 1px solid;       
+}
+
+ul.drop-down-menu > li:last-child {
+    border-right: none;
+}
+
+ul.drop-down-menu > li {
+    float: left; /* 只有第一層是靠左對齊*/
+} 
+ 
+ ul.drop-down-menu a {
+    /*background-color: #fff;*/
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    display: block;
+    padding: 0 30px;
+    text-decoration: none;
+    line-height: 40px;
+     
+}
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+    background-color: #e97810;
+    color: #fff;
+}
+
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+  background-color: #e97810;
+  color: #fff;
+}
+
+ul.drop-down-menu ul {
+  border: #ccc 1px solid;
+  position: absolute;
+  z-index: 99;
+  left: -1px;
+  top: 100%;
+  min-width: 180px;
+}
+
+ul.drop-down-menu ul li {
+    border-bottom: #ccc 1px solid;
+}
+
+ul.drop-down-menu ul li:last-child {
+    border-bottom: none;
+}
+
+ul.drop-down-menu ul ul { /*第三層以後的選單出現位置與第二層不同*/
+    z-index: 999;
+    top: -1px;
+    left: 100%;
+}
+
+ul.sub-menu {
+    margin-left: 0px;
+}
+
+ul.drop-down-menu ul { /*隱藏次選單*/
+    display: none;
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    display: block;
+}
+ ul.drop-down-menu ul { /*隱藏次選單*/ 
+    left: 99999px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;       
+}
+
+ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    left: -1px;
+    border-right: 5px;
+}
+ 
+ul.drop-down-menu li:hover > ul ul { /* 滑鼠滑入之後、次選單之後的選單依舊隱藏*/
+    left: 99999px;
+}
+ 
+ul.drop-down-menu ul li:hover > ul { /* 第二層之後的選單展開位置*/
+    left: 100%;
+}   
+
+.menu_header {
+  text-align: center;
+}   
+
+ul.drop-down-menu li {
+     /*border-right: unset;*/
+}
+/*menu end*/
+
+/*min cart start*/
+li.woocommerce-mini-cart-item.mini_cart_item {
+    height: 70px;
+    overflow: hidden;
+    /*padding: 11px 0;*/
+    border-bottom: 1px solid #ededed;
+    margin-bottom: 10px;
+    /*display: flex;*/
+    justify-content: space-between;
+}
+
+.mini_cart_img {
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+/*a.remove.remove_from_cart_button {
+    background: red;
+    border-radius: 100%;
+    padding: 0 7px 0 7px;
+    margin: 0 0px 0 5px;
+    float: right;
+}*/
+
+span.woocommerce-Price-amount.amount {
+    margin-right: 0.327em;
+}
+
+span.count {
+    font-weight: 400;
+    opacity: 0.5;
+    font-size: 0.875em;
+}
+
+a.button.wc-forward {
+    float: left;
+}
+
+span.quantity {
+    display: block;
+}
+
+p.woocommerce-mini-cart__buttons.buttons {
+    float: right;
+}
+
+a.button.checkout.wc-forward {
+    margin-left: 15px;
+}
+/*min cart end*/
+
+.site_name {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.main_header {
+    border-bottom: 1px solid #ccc;
+}
+
+.form-row label {
+    display: block;
+}
+
+.col-1 {
+  -ms-flex: unset;
+  flex: unset;
+  max-width: unset;
+}
+
+.col-2 {
+  -ms-flex: unset;
+  flex: unset;
+  max-width: unset;
+}
+
+.form-row {
+  display: unset;
+}
+
+/*have set in style.css 1470*/
+.cart_item {
+  /*display: flex;*/
+}
+
+.comment-form-cookies-consent {
+    display: none;
+}
+
+/*something bak*/
+/*#secondary {
+    margin: 0 20px;
+}*/
+
+li {
+    list-style: none;
+}
+
+/*.header_account_list>a.cart-contents>.woocommerce-Price-amount:first-child {
+    display: none;
+}
+
+.count {
+    font-size: 10px;
+}*/
+
+.right {
+    float: right;
+}
+
+.page_header_text {
+    margin: 0 0 50px 0;
+}
+
+/*sharethis start*/
+.st-disclaimer {
+    display: none;
+}
+.st-logo {
+    display: none;
+}
+
+/*sharethis end*/
+
+.breadcrumb_content h3 {
+    text-transform: capitalize;
+}
+
+.blog_content h4 {
+    text-transform: unset;
+}
+
+.blog_pagination .pagination { 
+  border: 1px solid #fff; 
+}
+
+.no_data_text {
+    margin: 30px auto;
+    font-size: 30px;
+}
+
+.mb-80 {
+    margin: 80px 0;
+}
+
+.right_content {
+    margin-bottom: 50px;
+}

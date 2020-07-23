@@ -1,0 +1,374 @@
+/* 02. slider area css here */
+.single_slider{
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        background-size: cover; 
+        height: 674px;
+        @media #{$laptop-device}{
+           height: 510px;
+        }
+        @media #{$desktop-device}{
+          height: 400px;
+        }
+        @media #{$tablet-device}{
+            height: 380px;
+        }
+        @media #{$large-mobile}{
+           background-position: 5%;
+            height: 300px;
+        }
+ 
+}
+.slider_section{
+    &.mb-40{
+        @media #{$tablet-device}{
+            margin-bottom: 30px;
+        }
+        @media #{$large-mobile}{
+           margin-bottom: 30px;
+        }
+    }
+    &.mb-70{
+        @media #{$large-mobile}{
+           margin-bottom: 60px;
+        }
+    }
+}
+.slider_area{
+    & .owl-dots{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translatex(-50%);
+        @media #{$large-mobile}{
+            bottom: 4px;
+        }
+        & .owl-dot{
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 3px;
+            transition: .3s;
+            background: #fff;
+            &.active{
+                background: $fonts_color;
+            }
+            &:hover{
+                background: $fonts_color;
+            }
+        }
+    }
+}
+
+.slider_content{
+    @media #{$large-mobile}{
+        text-align: center;
+        padding-left: 0;
+    }
+    & h1{
+        font-size: 68px;
+        line-height: 68px;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: #1e1e1f;
+        @media #{$laptop-device}{
+            font-size: 58px;
+            line-height: 58px;
+        }
+        @media #{$desktop-device}{
+            font-size: 45px;
+            line-height: 45px;
+        }
+        @media #{$tablet-device}{
+           font-size: 38px;
+            line-height: 38px;
+        }
+        @media #{$large-mobile}{
+            font-size: 26px;
+            line-height: 26px;
+        }
+    }
+    & h2{
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-weight: 400;
+        color: #1e1e1f;
+        position: relative;
+        padding-left: 70px;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 1px;
+            background: #1e1e1f;
+            top: 50%;
+            left: 0;
+            transform: translatey(-50%);
+        }
+        @media #{$laptop-device}{
+           font-size: 18px;
+            line-height: 18px;
+        }
+        @media #{$desktop-device}{
+            font-size: 17px;
+            line-height: 17px;
+            margin-bottom: 10px;
+        }
+        @media #{$tablet-device}{
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            padding-left: 64px;
+        }
+        @media #{$large-mobile}{
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        
+    }
+    & p{
+        font-size: 20px;
+        line-height: 20px;
+        padding: 33px 0 43px;
+        margin-bottom: 0;
+        @media #{$laptop-device}{
+           font-size: 18px;
+            line-height: 18px;
+        }
+        @media #{$desktop-device}{
+            font-size: 17px;
+            line-height: 17px;
+            padding: 27px 0 35px;
+        }
+        @media #{$tablet-device}{
+           font-size: 16px;
+            line-height: 18px;
+            padding: 21px 0 30px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            line-height: 23px;
+            padding: 14px 0 15px;
+             max-width: 100%;
+        }
+    }
+    & a{
+        font-size: 13px;
+        line-height: 43px;
+        height: 45px;
+        padding: 0 35px;
+        background: $fonts_color;
+        color: #fff;
+        border: 1px solid $fonts_color;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover{
+            color: $fonts_color;
+            background: #fff;
+        }
+        @media #{$desktop-device}{
+            line-height: 41px;
+            height: 43px;
+            padding: 0 28px;
+        }
+        @media #{$tablet-device}{
+            font-size: 13px;
+            line-height: 41px;
+            height: 43px;
+            padding: 0 25px;
+        }
+        @media #{$large-mobile}{
+            font-size: 12px;
+            line-height: 36px;
+            height: 38px;
+            padding: 0 18px;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+
+
+
+.active .slider_content h1,.active .slider_content h2,.active .slider_content h3,.active .slider_content a,.active .slider_content p,.active .slider_content span {
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.active .slider_content h2{
+     -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.active .slider_content h3,.active .slider_content span{
+     -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+.active .slider_content p{
+     -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+.active .slider_content a{
+     -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+
+
+
+/*home two css here*/
+.color_two{
+    & .slider_content a:hover{
+        background: $secondary_color2;
+        border-color: $secondary_color2;
+        color: #fff;
+    }
+    & .slider_area .owl-dots .owl-dot{
+        &:hover{
+            background: $secondary_color2;
+        }
+        &.active{
+            background: $secondary_color2;
+        }
+    }
+}
+
+
+.slider_s_two{
+    @media #{$tablet-device}{
+        margin-bottom: 78px;
+    }
+    @media #{$large-mobile}{
+        margin-bottom: 59px;
+    }
+}
+
+
+/*home three css here*/
+.slider_s_three{
+    @media #{$tablet-device}{
+        margin-bottom: 80px;
+    }
+    @media #{$large-mobile}{
+        margin-bottom: 55px;
+    }
+    & .single_slider{
+        height: 897px;
+        @media #{$laptop-device}{
+           height: 612px;
+        }
+        @media #{$desktop-device}{
+          height: 550px;
+        }
+        @media #{$tablet-device}{
+            height: 400px;
+        }
+        @media #{$large-mobile}{
+            height: 300px;
+        }
+    }
+    
+}
+
+
+.slider_c_three{
+    & h2{
+        color: #fff;
+        &::before{
+            background: #fff;
+        }
+    }
+    & h1{
+         color: #fff;
+    }
+    & p{
+        color: #fff;
+    }
+    & a{
+        background: #fff;
+        border: 1px solid #fff;
+        color: $fonts_color;
+        &:hover{
+            background:  $secondary_color;
+            border-color: $secondary_color;
+            color: #fff;
+        }
+    }
+    padding: 60px 105px 0;
+    @media #{$laptop-device}{
+        padding: 50px 0 0;
+    }
+    @media #{$desktop-device}{
+       padding: 50px 0 0;
+    }
+    @media #{$tablet-device}{
+       padding: 0;
+        
+    }
+    @media #{$large-mobile}{
+        padding: 0;
+    }
+}
+
+
+
+/*home four css here*/
+.slider_s_four{
+    @media #{$tablet-device}{
+      margin-bottom: 80px;
+    }
+    @media #{$large-mobile}{
+        margin-bottom: 60px;
+    }
+    & .single_slider{
+        height: 793px;
+        @media #{$laptop-device}{
+           height: 569px;
+        }
+        @media #{$desktop-device}{
+          height: 510px;
+        }
+        @media #{$tablet-device}{
+            height: 400px;
+        }
+        @media #{$large-mobile}{
+            height: 300px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

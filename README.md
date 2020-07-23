@@ -9,10 +9,10 @@ Udemy:
 <h2><a href="https://ke.qq.com/course/448367?tuin=b26eb164" target="_blank">https://ke.qq.com/course/448367</a></h2>
 
 # Creative WP Theme detail
-Theme Name:   Creative WP V1.0
-Theme URI:    http://creativecode.site/
-Author:       Creative Source
-Author URI:   http://creative.chat/
+Theme Name:   Creative WP V1.0 <br/>
+Theme URI:    http://creativecode.site <br/>
+Author:       Creative Source <br/>
+Author URI:   http://creative.chat <br/>
 
 <center><img src="https://raw.githubusercontent.com/creative-chat/Creative-WP-Theme/master/screenshot.png"></center>
 

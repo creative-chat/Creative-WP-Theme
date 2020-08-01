@@ -1,0 +1,237 @@
+/* 05. blog area css here */
+.blog_section{
+    background: #f9f9f9;
+    padding: 98px 0 100px;
+    @media #{$tablet-device}{
+        padding: 78px 0 80px;
+    }
+    @media #{$large-mobile}{
+        padding: 56px 0 60px;
+    }
+}
+.blog_carousel{
+    &:hover{
+        & .owl-nav{
+            & div{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    & .owl-nav{
+        & div{
+            position: absolute;
+            top: 49%;
+            transform: translatey(-50%);
+            left: -55px;
+            font-size: 20px;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            @include transition(.3s);
+            opacity: 0;
+            visibility: hidden;
+            border: 1px solid $fonts_color;
+            &:hover{
+                background: $fonts_color;
+                color: #fff;
+            }
+            @media #{$laptop-device}{
+                left: 0;
+            }
+            @media #{$desktop-device}{
+                left: 0;
+            }
+             @media #{$tablet-device}{
+                left: 0;
+            }
+            @media #{$large-mobile}{
+                left: 0;
+            }
+            &.owl-next{
+                right: -55px;
+                left: auto;
+                @media #{$laptop-device}{
+                    right: 0;
+                }
+                @media #{$desktop-device}{
+                    right: 0;
+                }
+                 @media #{$tablet-device}{
+                    right: 0;
+                }
+                @media #{$large-mobile}{
+                    right: 0;
+                }
+            }
+            @media #{$large-mobile}{
+                display: none;
+            }
+        }
+    }
+    
+    & .col-lg-3{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.single_blog{
+    background: #fff;
+}
+.blog_thumb{
+    overflow: hidden;
+    &:hover{
+        & img{
+            transform: scale(1.1) rotate(0.05deg);
+        }
+    }
+    & img{
+        transition: .3s;
+    }
+}
+.blog_content {
+    padding: 25px;
+    @media #{$desktop-device}{
+        padding: 20px 10px;
+    }
+    @media #{$tablet-device}{
+        padding: 18px 15px;
+    }
+    @media #{$large-mobile}{
+        padding: 20px 13px;
+    }
+    & h4{
+        font-size: 18px;
+        line-height: 1;
+        color: #1e1e1f;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+        @media #{$mini-laptop-device}{
+            font-size: 17px;
+            line-height: 21px;
+        }
+        @media #{$desktop-device}{
+            font-size: 15px;
+            line-height: 19px;
+            margin-bottom: 11px;
+            letter-spacing: 0;
+        }
+        @media #{$tablet-device}{
+            font-size: 17px;
+            line-height: 18px;
+        }
+        @media #{$large-mobile}{
+            font-size: 15px;
+            line-height: 20px;
+            margin-bottom: 8px;
+            letter-spacing: 0;
+        }
+        & a{
+            &:hover{
+                color: $secondary_color;
+            }
+        }
+    }
+    & p{
+        font-size: 15px;
+        line-height: 24px;
+        margin-bottom: 0;
+        @media #{$desktop-device}{
+            font-size: 14px;
+            line-height: 19px;
+        }
+        @media #{$tablet-device}{
+            font-size: 14px;
+            line-height: 23px;
+        }
+        @media #{$large-mobile}{
+            font-size: 14px;
+            line-height: 20px;
+        }
+        & span{
+            display: block;
+        }
+    }
+}
+
+
+.blog_footer{
+    margin-top: 19px;
+    @media #{$desktop-device}{
+      margin-top: 13px;
+    }
+    @media #{$tablet-device}{
+       margin-top: 14px;
+    }
+    @media #{$large-mobile}{
+        margin-top: 10px;
+    }
+    & > a{
+        position: relative;
+        color:#1e1e1f;
+        font-size: 13px;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 25px;
+        padding-left: 20px;
+        letter-spacing: .2px;
+        &:hover{
+            text-decoration: underline;
+            padding-left: 35px;
+            &::before{
+                width: 25px;
+            }
+        }
+        &::before{
+            content: "";
+            width: 10px;
+            height: 1px;
+            background:#1e1e1f;
+            display: inline-block;
+            vertical-align: middle;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transition: .3s;
+        }
+        @media #{$tablet-device}{
+            line-height: 22px;
+        }
+    }
+}
+
+
+
+/*home three css here*/
+.color_three{
+    & .blog_carousel .owl-nav div:hover{
+        background: $secondary_color;
+        border-color: $secondary_color;
+    }
+    & .blog_footer > a:hover{
+        color: $secondary_color;
+        &::before{
+            background: $secondary_color;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,5 +17,5 @@ Author URI:   http://creative.chat <br/>
 <center><img src="https://raw.githubusercontent.com/creative-chat/Creative-WP-Theme/master/screenshot.png"></center>
 
 # Version Update
-Version 1.0: 	08/07/2020
-Version 1.0.1: 	01/08/2020
+Version 1.0: 	08/07/2020<br/>
+Version 1.0.1: 	01/08/2020<br/>

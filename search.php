@@ -6,10 +6,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb_content">
-                        <h3>搜索</h3>
+                        <h3>Search</h3>
                         <ul>
-                            <li><a href="<?php echo get_option('home'); ?>">首页</a></li>
-                            <li>搜索内容：<?php the_search_query(); ?></li>
+                            <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
+                            <li>Search content: <?php the_search_query(); ?></li>
                         </ul>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                     <div class="blog_wrapper">
                         <div class="row">
                             
-                            <!-- 搜索页面会自动获取当前页和总页数的值 -->
+                            <!-- The search page will automatically get the value of the current page and the total number of pages -->
                             <?php if (have_posts()) : while(have_posts()): the_post(); ?>
 
 
@@ -45,7 +45,7 @@
                                                         <?php the_excerpt(); ?>
                                                     </p>
                                                    <footer class="blog_footer">
-                                                        <a href="<?php the_permalink(); ?>">阅读更多</a>
+                                                        <a href="<?php the_permalink(); ?>">Read more</a>
                                                     </footer>
                                                 </figcaption>
                                             </figure>
@@ -56,7 +56,7 @@
 
                             <?php 
                             else :
-                                echo '<div class="no_data_text">抱歉，没有内容！</div>';
+                                echo '<div class="no_data_text">Sorry, no content!</div>';
                             endif; ?>
                             
                         </div>
@@ -67,8 +67,8 @@
                         <div class="pagination">
                             <ul>
                                 <?php echo paginate_links( array(
-                                    'prev_text'          => __( '<style>.blog_pagination .pagination {     border: 1px solid #ededed; }</style>上一页', '' ),
-                                    'next_text'          => __( '<style>.blog_pagination .pagination {     border: 1px solid #ededed; }</style>下一页', '' ),
+                                    'prev_text' => __('<style>.blog_pagination .pagination {border: 1px solid #ededed; }</style>Previous page','' ),
+                                    'next_text' => __('<style>.blog_pagination .pagination {border: 1px solid #ededed; }</style>Next page','' ),
                                 ) ); ?>
                             </ul>
                         </div>

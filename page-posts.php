@@ -1,6 +1,6 @@
 <?php
 /*
-template name: 博客 / Blog
+template name: Blog
 */
 ?>
 
@@ -14,7 +14,7 @@ template name: 博客 / Blog
                     <div class="breadcrumb_content">
                         <h3><?php the_title(); ?></h3>
                         <ul>
-                            <li><a href="<?php echo get_option('home'); ?>">首页</a></li>
+                            <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
                             <li><?php the_title(); ?></li>
                         </ul>
                     </div>
@@ -33,26 +33,26 @@ template name: 博客 / Blog
                     <div class="blog_wrapper">
                         <div class="row">
                             
-                            <!-- 在页面上搜索显示文章数量，需要额外获取当前页和总页数的值 -->
+                            <!-- Search for the number of articles displayed on the page, you need to obtain the value of the current page and the total number of pages -->
                             <?php
-                            $current_page = max(1, get_query_var('paged')); //当前第几页
+                            $current_page = max(1, get_query_var('paged')); //The current page
 
-                            //查询参数
+                            //Query parameters
                             $args = array_filter(array(
-                                'post_type' => 'post',
-                                'ignore_sticky_posts' =>  1 ,
+                                'post_type' =>'post',
+                                'ignore_sticky_posts' => 1,
                                 'posts_per_page' => 3,
-                                'paged' => $current_page, //当前页
-                                // 'orderby' => 'title',
-                                // 'order' => 'ASC',
+                                'paged' => $current_page, //current page
+                                //'orderby' =>'title',
+                                //'order' =>'ASC',
                             ));
 
-                            //开始查询
+                            //Start query
                             $query = new WP_Query($args);
 
-                            $total_pages = $query->max_num_pages;  //总共多少页
+                            $total_pages = $query->max_num_pages; //how many pages in total
 
-                            if ($query->have_posts()) :
+                            if ($query->have_posts()):
                                 while ($query->have_posts()):
                                 $query->the_post();
 
@@ -72,7 +72,7 @@ template name: 博客 / Blog
                                                         <?php the_excerpt(); ?>
                                                     </p>
                                                    <footer class="blog_footer">
-                                                        <a href="<?php the_permalink(); ?>">阅读更多</a>
+                                                        <a href="<?php the_permalink(); ?>">Read more</a>
                                                     </footer>
                                                 </figcaption>
                                             </figure>
@@ -83,7 +83,7 @@ template name: 博客 / Blog
 
                             <?php 
                             else :
-                                echo '<div class="no_data_text">抱歉，没有内容！</div>';
+                                echo '<div class="no_data_text">Sorry, no content!</div>';
                             endif; ?>
                             
                         </div>
@@ -101,12 +101,12 @@ template name: 博客 / Blog
                         <div class="pagination">
                             <ul>
                                 <?php echo paginate_links( array(
-                                    'prev_text'          => __( '<style>.blog_pagination .pagination {     border: 1px solid #ededed; }</style>上一页', '' ),
-                                    'next_text'          => __( '<style>.blog_pagination .pagination {     border: 1px solid #ededed; }</style>下一页', '' ),
-                                    'screen_reader_text'  => null,
-                                    'total' => $total_pages,  //总页数
-                                    'current' => $current_page, //当前页数
-                                ) ); ?>
+                                'prev_text' => __('<style>.blog_pagination .pagination {border: 1px solid #ededed; }</style>Previous page','' ),
+                                'next_text' => __('<style>.blog_pagination .pagination {border: 1px solid #ededed; }</style>Next page','' ),
+                                'screen_reader_text' => null,
+                                'total' => $total_pages, //Total pages
+                                'current' => $current_page, //Current page number
+                                 ) ); ?>
                             </ul>
                         </div>
                     </div>

@@ -136,10 +136,10 @@
                         <div class="language_currency text-right">
                             <ul>
                                 <?php if ( is_user_logged_in() ) { ?>
-                                    <li><a href="<?php echo wp_logout_url( home_url(add_query_arg(array(),$wp->request)) ); ?>" ><i class="fa fa-sign-out"></i> <span>退出</span></a></li>
+                                    <li><a href="<?php echo wp_logout_url( home_url(add_query_arg(array(),$wp->request)) ); ?>" ><i class="fa fa-sign-out"></i> <span>Logout</span></a></li>
                                 <?php } else { ?>
-                                    <li><a href="<?php echo get_option('home'); ?>/wp-login.php?action=register"> <i class="fa fa-edit"></i> <span>注册</span></a></li>
-                                    <li><a href="<?php echo get_option('home'); ?>/my-account/"><i class="fa fa-sign-in"></i> <span>登录</span></a></li>
+                                    <li><a href="<?php echo get_option('home'); ?>/wp-login.php?action=register"> <i class="fa fa-edit"></i> <span>Register</span></a></li>
+                                    <li><a href="<?php echo get_option('home'); ?>/my-account/"><i class="fa fa-sign-in"></i> <span>Login</span></a></li>
                                 <?php } ?>
                             </ul>
                         </div>

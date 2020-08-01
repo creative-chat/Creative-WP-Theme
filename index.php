@@ -3,24 +3,24 @@
     <!--slider area start-->
     <section class="slider_section slider_s_two color_two mb-95">
         <div class="slider_area owl-carousel">
-            <div class="single_slider d-flex align-items-center" data-bgimg="<?php echo esc_url(get_template_directory_uri()); ?>/static/images/slider1.png">
+            <div class="single_slider d-flex align-items-center" data-bgimg="<?php echo esc_url(get_template_directory_uri()); ?>/static/images/slider1.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="slider_content">
-                                <h2>软件架构师制作的</h2>
-                                <h1>WordPress课程</h1>
+                                <h2>Created by a software architect</h2>
+                                <h1>WordPress course</h1>
                                 <p>
-                                零基础入门，<br/>
-                                开发博客主题，WooCommerce主题
+                                    Getting started with zero foundation,<br/>
+                                    Develop blog theme, WooCommerce theme
                                 </p>
-                                <a href="https://ke.qq.com/course/448367" target="_blank">去了解 </a>
+                                <a href="https://www.udemy.com/course/fast-learn-wordpress-and-build-up-your-own-online-website/" target="_blank">Read more </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single_slider d-flex align-items-center" data-bgimg="<?php echo esc_url(get_template_directory_uri()); ?>/static/images/slider2.png">
+            <div class="single_slider d-flex align-items-center" data-bgimg="<?php echo esc_url(get_template_directory_uri()); ?>/static/images/slider2.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -46,8 +46,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                       <h2>推荐产品 </h2>
-                       <p>	<a href="">了解更多</a></p>
+                       <h2>Recommended products </h2>
+                       <p>	<a href="">Read more</a></p>
                     </div>
                 </div>
             </div> 
@@ -57,32 +57,32 @@
                     <?php global $wp_query, $post, $woocommerce,$query_string;
                     $args = array(
                         'tax_query' => array(
-                        'relation' => 'OR',
+                        'relation' =>'OR',
                             array(
-                                'taxonomy' => 'product_cat', // 此处参数指定为产品目录
-                                'field' => 'id', // 调用依据为产品目录id
-                                'terms' => array( 20 ), // 20为产品目录id
+                                'taxonomy' =>'product_cat', // The parameter here is specified as the product catalog
+                                'field' =>'id', // call based on product catalog id
+                                'terms' => array( 20 ), // 20 is the product catalog id
                             ),
                         ),
-                        'posts_per_page' => 5, // 一共需要调用的文章数量
-                        'post_status'    => 'publish', // 调用的文章为已经发布
-                        'post_type'      => 'product', // 调用的类型为产品（product）
-                        'no_found_rows'  => 1,
-                        'order'          => 'desc', // 最新 - asc，最早 - desc
-                        'meta_query'     => array() // 还可以使用post meta进行查询，这个和wordpress循环中使用一样
+                        'posts_per_page' => 5, // Total number of posts to be called
+                        'post_status' =>'publish', // The called post is already published
+                        'post_type' =>'product', // The type of the call is product (product)
+                        'no_found_rows' => 1,
+                        'order' =>'desc', // latest-asc, earliest-desc
+                        'meta_query' => array() // You can also use post meta to query, this is the same as used in wordpress loop
                     );
-                    //以上为循环的参数
-                    $query= new WP_Query( apply_filters( 'woocommerce_products_widget_query_args', $args ) );//建立循环查询
-                    //开始循环
-                    if($query->have_posts()) :
-                    while ( $query->have_posts() ) :$query->the_post(); ?>
+                    //The above are the parameters of the loop
+                    $query = new WP_Query( apply_filters('woocommerce_products_widget_query_args', $args) );//Establish a loop query
+                    //Start loop
+                    if($query->have_posts()):
+                    while ($query->have_posts()) :$query->the_post(); ?>
 
                         <div class="col-lg-3">
                             <article class="single_product">
                                 <figure>
                                     <div class="product_thumb">
                                         <a class="primary_img" href="<?php the_permalink(); ?>">
-                                            <!-- 图片缩略图 -->
+                                            <!-- Picture thumbnail -->
                                             <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
                                         </a>
                                     </div>
@@ -107,8 +107,8 @@
                             </article>
                         </div>
                         
-                    <?php endwhile;  // 结束循环
-                        wp_reset_query(); // 清除循环
+                    <?php endwhile; // end the loop
+                        wp_reset_query(); // Clear the loop
                     endif;
                     ?>
                    
@@ -124,8 +124,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                       <h2>最新产品 </h2>
-                       <p>  <a href="">了解更多</a></p>
+                       <h2>Latest products </h2>
+                       <p>  <a href="">Read more</a></p>
                     </div>
                 </div>
             </div> 
@@ -137,7 +137,7 @@
                     // 'post_type'      => 'post',
                     'post_type'      => 'product',
                     'posts_per_page' => '5',
-                    'order'          => 'desc', // 最新 - asc，最早 - desc
+                    'order'          => 'desc', // Latest - asc, earliest - desc
                   ));
                 if ($query->have_posts()) :
                     while ($query->have_posts()) : $query->the_post();?>
@@ -147,7 +147,7 @@
                             <figure>
                                 <div class="product_thumb">
                                     <a class="primary_img" href="<?php the_permalink(); ?>">
-                                        <!-- 图片缩略图 -->
+                                        <!-- Picture thumbnail -->
                                         <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
                                     </a>
                                 </div>
@@ -176,7 +176,7 @@
 
                 <?php 
                 else :
-                    echo '<p>没有内容</p>';
+                    echo '<p>Sorry, no content!</p>';
                 endif; ?>
                
                </div>
@@ -212,8 +212,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section_title">
-                       <h2>最新文章 </h2>
-                       <p>	<a href="">查看更多</a></p>
+                       <h2>Latest posts </h2>
+                       <p>	<a href="">Read more</a></p>
                     </div>
                 </div>
             </div> 
@@ -225,7 +225,7 @@
                         'post_type'      => 'post',
                         // 'post_type'      => 'product',
                         'posts_per_page' => '5',
-                        'order'          => 'desc', // 最新 - asc，最早 - desc
+                        'order'          => 'desc', // Latest - asc, earliest - desc
                       ));
                     if ($query->have_posts()) :
                         while ($query->have_posts()) : $query->the_post();?>
@@ -244,7 +244,7 @@
                                             <?php the_excerpt(); ?>
                                         </p>
                                        <footer class="blog_footer">
-                                            <a href="<?php the_permalink(); ?>">阅读更多</a>
+                                            <a href="<?php the_permalink(); ?>">Read more</a>
                                         </footer>
                                     </figcaption>
                                 </figure>
@@ -255,7 +255,7 @@
 
                     <?php 
                     else :
-                        echo '<p>没有内容</p>';
+                        echo '<p>Sorry, no content!</p>';
                     endif; ?>
                     
                </div>

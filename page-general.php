@@ -1,6 +1,6 @@
 <?php
 /*
-template name: 一般页面 / General page
+template name: General page
 */
 ?>
 
@@ -14,7 +14,7 @@ template name: 一般页面 / General page
                     <div class="breadcrumb_content">
                         <h3><?php the_title(); ?></h3>
                         <ul>
-                            <li><a href="<?php echo get_option('home'); ?>">首页</a></li>
+                            <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
                             <li><?php the_title(); ?></li>
                         </ul>
                     </div>

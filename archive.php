@@ -19,24 +19,24 @@
                             single_tag_title();
                         }elseif(is_author()){
                             the_post();
-                            echo '作者：'. get_the_author();
+                            . Echo 'Author:' get_the_author ();
                             rewind_posts();
                         }elseif(is_search()){
-                            echo '搜索结果';
+                            echo'Search results';
                         }elseif(is_day()){
-                            echo '档案：' .get_the_date();
+                            echo'File:' .get_the_date();
                         }elseif(is_month()){
-                            echo '档案：' .get_the_date('F Y');
+                            echo'File:' .get_the_date('F Y');
                         }elseif(is_year()){
-                            echo '档案：' .get_the_date('Y');
+                            echo'File:' .get_the_date('Y');
                         }else{
-                            echo '档案';
+                            echo'file';
                         }
                         ?>
 
                         </h3>
                         <ul>
-                            <li><a href="<?php echo get_option('home'); ?>">首页</a></li>
+                            <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
                             <li><?php the_title(); ?></li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@
                     <div class="blog_wrapper">
                         <div class="row">
 
-                            <!-- 归档页面会自动获取当前页和总页数的值 -->
+                            <!-- The archive page will automatically get the value of the current page and total pages -->
                             <?php if (have_posts()) : while(have_posts()): the_post(); ?>
 
 
@@ -73,7 +73,7 @@
                                                         <?php the_excerpt(); ?>
                                                     </p>
                                                    <footer class="blog_footer">
-                                                        <a href="<?php the_permalink(); ?>">阅读更多</a>
+                                                        <a href="<?php the_permalink(); ?>">Read more</a>
                                                     </footer>
                                                 </figcaption>
                                             </figure>

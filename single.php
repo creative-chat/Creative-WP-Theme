@@ -10,7 +10,7 @@
                     <div class="breadcrumb_content">
                        <h3><?php the_title(); ?></h3>
                         <ul>
-                            <li><a href="<?php echo get_option('home'); ?>">首页</a></li>
+                            <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
                             <li><?php the_title(); ?></li>
                         </ul>
                     </div>
@@ -34,31 +34,31 @@
                                     <div class="blog_meta">   
                                        <p>
 
-                                        <?php 
+                                        <?php
                                         the_post(); // queue first post
                                         $author_id = get_the_author_meta('ID');
                                         $curauth = get_user_by('ID', $author_id);
-                                        $user_nicename    = $curauth->user_nicename;
-                                        $display_name     = $curauth->display_name;
+                                        $user_nicename = $curauth->user_nicename;
+                                        $display_name = $curauth->display_name;
                                         rewind_posts(); // rewind the loop
                                         ?>
 
-                                        <a href="<?php echo get_author_posts_url($author_id, $user_nicename); ?>"><?php echo $display_name; ?></a> 在 <?php the_time('Y年n月j日, G:i:s'); ?> 发布
-                                         / 类别：
+                                        <a href="<?php echo get_author_posts_url($author_id, $user_nicename); ?>"><?php echo $display_name; ?></a> in <?php the_time('j/n/Y, G:i:s'); ?> Publish
+                                         / Category:
                                         <?php
                                         $categories = get_the_category();
                                         $separator = ", ";
-                                        $output = '';
+                                        $output ='';
 
                                         if($categories){
                                             foreach ($categories as $category){
-                                                $output .= '<a href="' . get_category_link($category->term_id). '">'. $category->cat_name . '</a>'. $separator;
+                                                $output .='<a href="'. get_category_link($category->term_id).'">'. $category->cat_name.'</a>'. $separator;
                                             }
                                             echo trim($output, $separator);
                                         }
                                         ?>
-                                         / <i class="fa fa-fw fa-eye"></i> 浏览：<?php get_post_views($post -> ID); ?>
-                                       </p>                                     
+                                         / <i class="fa fa-fw fa-eye"></i> View: <?php get_post_views($post -> ID); ?>
+                                        </p>                                   
                                     </div>
                                 </div>
                                 <div class="blog_d_thumb">
@@ -84,7 +84,7 @@
                                         </div>
 
                                         <div class="social_sharing">
-                                            <p>分享：</p>
+                                            <p>Share:</p>
                                             <div class="sharethis-inline-share-buttons"></div>
                                         </div>
                                     </div>
@@ -92,7 +92,7 @@
                             </figure>
                         </article>
                         <div class="related_posts">
-                           <h3>相关文章</h3>
+                           <h3>Related posts</h3>
                             <div class="row">
 
                                 <?php
@@ -121,8 +121,8 @@
                                                     <figcaption class="related_content">
                                                        <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                                                        <div class="blog_meta">                                        
-                                                            <span class="author">发布：<a href="<?php echo get_author_posts_url($author_id, $user_nicename); ?>"><?php echo $display_name; ?></a> / </span>
-                                                            <span class="meta_date"> <?php the_time('Y年n月j日, G:i:s'); ?> </span>
+                                                            <span class="author">Publish: <a href="<?php echo get_author_posts_url($author_id, $user_nicename); ?>"><?php echo $display_name; ?></a> / </span>
+                                                            <span class="meta_date"> <?php the_time('j/n/Y, G:i:s'); ?> </span>
                                                         </div>
                                                     </figcaption>
                                                 </figure>
@@ -133,12 +133,12 @@
                                         }
                                     }
                                     else { ?>
-                                    * 暂无相关文章
+                                    * No related posts
                                     <?php }
                                     wp_reset_query();
                                 }
                                 else { ?>
-                                  * 暂无相关文章
+                                  * No related posts
                                 <?php }
                                 ?>
 
